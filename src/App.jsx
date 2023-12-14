@@ -2,8 +2,7 @@ import "./App.css";
 import "./i18n/i18n";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-// import loading
-import Loading from "./components/loading/Loading";
+
 function App() {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState("az");
