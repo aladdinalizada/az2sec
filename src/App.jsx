@@ -25,7 +25,6 @@ function App() {
           <main>
             <h1>{t("Title")}</h1>
             <p>{t("desc")}</p>
-            <Loading />
           </main>
           <footer>
             <p>
