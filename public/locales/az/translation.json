@@ -1,5 +1,7 @@
 {
-  "Title": "Xoş Gəlmisiniz",
-  "desc": "Bu vebsayt Azərbaycan Texniki Universitetinin Kibertəhlükəsizlik kafedrasının vebsaytıdır. Bu veb saytda kafedranın fəaliyyəti, tədris işləri, elmi əsərləri, təşkilatçılıq işləri və digər məqamlarla bağlı məlumatlar yerləşdirilmişdir.",
-  "Contact": "Əlaqə"
+  "About": "Haqqımızda",
+  "Education/TrainingPrograms": "Təhsil/Təlim Proqramları",
+  "News": "Xəbərlər",
+  "Contact": "Əlaqə",
+  "Login": "Daxil ol"
 }

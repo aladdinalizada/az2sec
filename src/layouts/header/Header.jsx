@@ -1,25 +1,30 @@
 // import { Dropdown } from "flowbite-react";
 // import { slide as Menu } from "react-burger-menu";
+import "../../i18n/i18n";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { t } = useTranslation();
+
   return (
     <div className="w-full h-16 px-3 flex justify-between items-center bg-black text-white sm:px-11 sm:h-20">
       <div>Logo</div>
 
       <nav>
         <ul className="DESKTOP_MENU hidden gap-x-9 sm:gap-x-3 sm:flex">
-          <li>Haqqımızda</li>
-          <li>Təhsil/Təlim Proqramları</li>
-          <li>Xəbərlər</li>
-          <li>Əlaqə</li>
+          <li>{t("About")}</li>
+          <li>{t("Education/TrainingPrograms")}</li>
+          <li>{t("News")}</li>
+          <li>{t("Contact")}</li>
         </ul>
       </nav>
 
       <div className="flex items-center gap-x-4">
         <div className=" hidden sm:flex p-0.5 w-36 h-12 rounded-2xl border bg-gradient-to-r from-[#6DDCFF] to-[#7F60F9]">
           <button className="w-full h-full bg-black rounded-xl hover:bg-transparent transition-all duration-[290ms] ease-out">
-            <span className="text-white">Daxil ol</span>
+            <span className="text-white">{t("Login")}</span>
           </button>
         </div>
         <div className="MOBILE-MENU flex sm:hidden">
@@ -52,19 +57,19 @@ const Header = () => {
             </div>
             <ul className="flex flex-col items-center justify-between min-h-[250px]">
               <li className="border-b border-gray-400 my-8 uppercase text-black">
-                <a href="#">Haqqımızda</a>
+                <a href="#">{t("About")}</a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase text-black">
-                <a href="">Təhsil/Təlim Proqramları</a>
+                <a href="">{t("Education/TrainingPrograms")}</a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase text-black">
-                <a href="">Xəbərlər</a>
+                <a href="">{t("News")}</a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase text-black">
-                <a href="">Əlaqə</a>
+                <a href="">{t("Contact")}</a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase text-black">
-                <a href="">Daxil Ol</a>
+                <a href="">{t("Login")}</a>
               </li>
             </ul>
           </div>

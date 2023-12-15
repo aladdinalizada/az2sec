@@ -1,5 +1,7 @@
 {
-  "Title": "Welcome",
-  "desc": "This website is the website of the Department of Cybersecurity of the Azerbaijan Technical University. This website contains information about the activities, teaching activities, scientific works, organizational activities and other issues of the department.",
-  "Contact": "Contact"
+  "About": "About",
+  "Education/TrainingPrograms": "Education/Training Programs",
+  "News": "News",
+  "Contact": "Contact",
+  "Login": "Sign In"
 }

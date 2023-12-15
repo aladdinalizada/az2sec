@@ -1,20 +1,13 @@
-// import "./i18n/i18n";
-// import { useState } from "react";
-// import { useTranslation } from "react-i18next";
-
 import Header from "./layouts/header/header";
 import Hero from "./pages/Hero/Hero";
+import Zero from "./pages/Zero/Zero";
 
 function App() {
-  // const { t, i18n } = useTranslation();
-  // const [language, setLanguage] = useState("az");
-  // const changeLanguage = (e) => {
-  //   setLanguage(e.target.value);
-  //   i18n.changeLanguage(e.target.value);
-  // };
+  localStorage.setItem("lang", "az");
   return (
     <>
       <div className="App">
+        <Zero />
         <Header />
         <Hero />
       </div>
