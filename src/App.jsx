@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
-import Header from "./layouts/header/header";
-import Hero from "./pages/Hero/Hero";
-import Zero from "./pages/Zero/Zero";
+import Header from "./layouts/header";
+import Hero from "./pages/Hero";
+import Zero from "./pages/Zero";
 
 function App() {
   localStorage.setItem("lang", "az");
