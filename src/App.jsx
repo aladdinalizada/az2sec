@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import Header from "./layouts/header";
+import Features from "./pages/Features";
 import Hero from "./pages/Hero";
 import Zero from "./pages/Zero";
 
@@ -18,6 +19,7 @@ function App() {
         <Zero />
         <Header />
         <Hero />
+        <Features />
       </div>
     </>
   );
