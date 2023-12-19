@@ -4,7 +4,7 @@ import UsefulLinks from "../../assets/images/usefulLinks.png";
 import Youtube from "../../assets/images/youtube.png";
 const Features = () => {
   return (
-    <div className="w-full h-[510px] flex justify-center items-center my-28 text-center">
+    <div className="w-full h-[510px] flex justify-center items-center my-32 text-center sm:my-20">
       <div className="w-[50%] h-full flex flex-col justify-center gap-7 items-center sm:flex-wrap">
         <div className="w-full h-[40%] flex flex-col justify-center gap-2 items-center sm:w-[40%]">
           <img src={ReadingHall} alt="" />
