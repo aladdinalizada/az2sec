@@ -3,6 +3,7 @@ import Header from "./layouts/header";
 import Features from "./pages/Features";
 import Hero from "./pages/Hero";
 import News from "./pages/News";
+import PlansAndMeasures from "./pages/PlansAndMeasures";
 import Zero from "./pages/Zero";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Hero />
         <Features />
         <News />
+        <PlansAndMeasures />
       </div>
     </>
   );
