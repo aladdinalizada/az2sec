@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import Footer from "./layouts/footer";
 import Header from "./layouts/header";
 import Features from "./pages/Features";
 import Hero from "./pages/Hero";
@@ -26,6 +27,7 @@ function App() {
         <News />
         <PlansAndMeasures />
         <Seminars />
+        <Footer />
       </div>
     </>
   );
