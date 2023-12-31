@@ -1,8 +1,10 @@
 import Phone from "../../assets/phone.png";
 import Mail from "../../assets/mail.png";
 import Location from "../../assets/location.png";
-
+import "../../i18n/i18n";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div>
       <div className="w-full h-full bg-[#0F172A] opacity-90 text-white p-9 px-14">
@@ -11,10 +13,10 @@ const Footer = () => {
           <div className="flex flex-col gap-10 items-center sm:items-start">
             <div>Logo</div>
             <ul className="flex flex-col items-center gap-y-4 gap-x-3 sm:flex-row">
-              <li>Haqqımızda</li>
-              <li>Təhsil/Təlim Proqramları</li>
-              <li>Xəbərlər</li>
-              <li>Əlaqə</li>
+              <li>{t("About")}</li>
+              <li>{t("Education/TrainingPrograms")}</li>
+              <li>{t("News")}</li>
+              <li>{t("Contact")}</li>
             </ul>
           </div>
           {/* Right */}
