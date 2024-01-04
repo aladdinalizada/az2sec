@@ -1,15 +1,24 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
-import Footer from "./layouts/footer";
-import Header from "./layouts/header";
-import Features from "./pages/Features";
-import Hero from "./pages/Hero";
-import News from "./pages/News";
-import PlansAndMeasures from "./pages/PlansAndMeasures";
-import Seminars from "./pages/Seminars";
 import Zero from "./pages/Zero";
+import Header from "./layouts/header";
+import Footer from "./layouts/footer";
+import Routing from "./routes";
 
 function App() {
   localStorage.setItem("lang", "az");
+  // accses location
+  const [location, setLocation] = useState("");
+  useEffect(() => {
+    const getLocation = async () => {
+      const response = await fetch("https://ipapi.co/json/");
+      const data = await response.json();
+      setLocation(data);
+    };
+    getLocation();
+  }, [location]);
+  localStorage.setItem("location", JSON.stringify(location));
   return (
     <>
       <Helmet>
@@ -22,11 +31,7 @@ function App() {
       <div className="App">
         <Zero />
         <Header />
-        <Hero />
-        <Features />
-        <News />
-        <PlansAndMeasures />
-        <Seminars />
+        <Routing />
         <Footer />
       </div>
     </>
