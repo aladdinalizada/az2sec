@@ -3,11 +3,21 @@
 import "../../i18n/i18n";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../firebase";
+import { logout as logoutHandle } from "../../redux/store/auth";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { t } = useTranslation();
-
+  const dispatch = useDispatch();
+  const handleLogout = async () => {
+    await logout();
+    dispatch(logoutHandle());
+    setIsNavOpen(false);
+  };
+  const { user } = useSelector((state) => state.auth);
   return (
     <div className="w-full h-16 px-3 flex justify-between items-center bg-black text-white sm:px-11 sm:h-20">
       <div>Logo</div>
@@ -24,7 +34,13 @@ const Header = () => {
       <div className="flex items-center gap-x-4">
         <div className=" hidden sm:flex p-0.5 w-36 h-12 rounded-2xl border bg-gradient-to-r from-[#6DDCFF] to-[#7F60F9]">
           <button className="w-full h-full bg-black rounded-xl hover:bg-transparent transition-all duration-[290ms] ease-out">
-            <span className="text-white">{t("Login")}</span>
+            {user ? (
+              <span className="text-white">{t("Profile")}</span>
+            ) : (
+              <Link to="/login">
+                <span className="text-white">{t("Login")}</span>
+              </Link>
+            )}
           </button>
         </div>
         <div className="MOBILE-MENU flex sm:hidden">
@@ -68,8 +84,21 @@ const Header = () => {
               <li className="border-b border-gray-400 my-8 uppercase text-black">
                 <a href="">{t("Contact")}</a>
               </li>
+              <li className="border-b border-gray-400 my-8 text-black">
+                {user ? (
+                  <span className="text-black">{user.email}</span>
+                ) : (
+                  <Link to="/login" onClick={() => setIsNavOpen(false)}>
+                    <span className="text-black uppercase">{t("Login")}</span>
+                  </Link>
+                )}
+              </li>
               <li className="border-b border-gray-400 my-8 uppercase text-black">
-                <a href="">{t("Login")}</a>
+                {user && (
+                  <button className="text-black" onClick={handleLogout}>
+                    {t("Logout")}
+                  </button>
+                )}
               </li>
             </ul>
           </div>

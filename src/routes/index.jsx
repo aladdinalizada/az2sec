@@ -4,6 +4,8 @@ import Features from "../pages/Features";
 import News from "../pages/News";
 import PlansAndMeasures from "../pages/PlansAndMeasures";
 import Seminars from "../pages/Seminars";
+import SignUp from "../auth/SignUp";
+import Login from "../auth/Login";
 const Routing = () => {
   const Home = () => {
     return (
@@ -19,6 +21,8 @@ const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<SignUp />} />
     </Routes>
   );
 };
