@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { register } from "../../firebase";
 import { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const SignUp = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,6 +15,9 @@ const SignUp = () => {
       setEmail("");
       setPassword("");
     }
+    navigate("/login", {
+      replace: true,
+    });
   };
   return (
     <div className="registerForm">

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import Zero from "./pages/Zero";
+import Zero from "./components/Zero";
 import Header from "./layouts/header";
 import Footer from "./layouts/footer";
 import Routing from "./routes";

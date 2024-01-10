@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import Hero from "../pages/Hero";
-import Features from "../pages/Features";
-import News from "../pages/News";
-import PlansAndMeasures from "../pages/PlansAndMeasures";
-import Seminars from "../pages/Seminars";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import News from "../components/News";
+import PlansAndMeasures from "../components/PlansAndMeasures";
+import Seminars from "../components/Seminars";
 import SignUp from "../auth/SignUp";
 import Login from "../auth/Login";
 const Routing = () => {
