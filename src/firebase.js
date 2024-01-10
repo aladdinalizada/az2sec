@@ -5,6 +5,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import toast from "react-hot-toast";
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,7 +19,8 @@ const firebaseConfig = {
 };
 // init firebase
 const app = initializeApp(firebaseConfig);
-
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
 const auth = getAuth();
 export const register = async (email, password) => {
   try {
@@ -50,3 +52,4 @@ export const logout = async () => {
   }
 };
 export default app;
+export { db };
