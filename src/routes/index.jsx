@@ -6,6 +6,7 @@ import PlansAndMeasures from "../components/PlansAndMeasures";
 import Seminars from "../components/Seminars";
 import SignUp from "../auth/SignUp";
 import Login from "../auth/Login";
+import NotFound from "../pages/NotFound";
 const Routing = () => {
   const Home = () => {
     return (
@@ -23,6 +24,7 @@ const Routing = () => {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<SignUp />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
