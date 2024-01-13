@@ -7,6 +7,7 @@ import Seminars from "../components/Seminars";
 import SignUp from "../auth/SignUp";
 import Login from "../auth/Login";
 import NotFound from "../pages/NotFound";
+import Newspage from "../pages/News";
 const Routing = () => {
   const Home = () => {
     return (
@@ -24,6 +25,8 @@ const Routing = () => {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<SignUp />} />
+      <Route path="/news" element={<Newspage />} />
+      <Route path="/404" element={<NotFound />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
